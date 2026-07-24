@@ -165,10 +165,22 @@
     font-size:13px; color:var(--gray-light);
   }
 
+  .sticky-bar{
+    position:fixed; bottom:0; left:0; right:0;
+    background:#fff; border-top:1px solid var(--line);
+    padding:12px 16px; display:none;
+    align-items:center; justify-content:space-between; gap:14px;
+    z-index:50; box-shadow:0 -10px 24px rgba(0,0,0,.1);
+  }
+  .sticky-bar .amount-mini{font-family:'Inter',sans-serif; font-weight:800; font-size:18px;}
+  .sticky-bar .btn-primary{padding:12px 22px; font-size:14.5px;}
+
   @media(max-width:800px){
     .features{grid-template-columns:1fr;}
     .story .wrap{grid-template-columns:1fr;}
     .story img{order:-1;}
+    .sticky-bar{display:flex;}
+    body{padding-bottom:72px;}
   }
 </style>
 </head>
@@ -183,13 +195,13 @@
   <div class="mesh"></div>
   <div class="hero-inner">
     <span class="eyebrow">Curating Memories. Preserving Kolkata.</span>
-    <h1>Take Kolkata home.</h1>
-    <p class="lede">A handmade wooden tray carrying the city's most iconic sight — the yellow taxi — for the table you actually gather around.</p>
+    <h1>Some places<br>never leave you.</h1>
+    <p class="lede">Nobody remembers their last Uber. But every Bengali remembers the yellow taxi. We couldn't preserve the sound of it — so we put the sight of it on a tray for your own table instead.</p>
     <div class="cta-row">
-      <a href="#buy" class="btn-primary">Bring Kolkata Home — <span id="price-hero">₹1,350</span></a>
+      <a href="#buy" class="btn-primary">Gift Kolkata — <span id="price-hero">₹1,350</span></a>
       <a href="#story" class="btn-ghost">See the story</a>
     </div>
-    <div class="fine-print">Cash on delivery available · Ships across India</div>
+    <div class="fine-print">Cash on delivery available · Ships across India · Handcrafted in small batches</div>
   </div>
   <div class="product-shot">
     <div class="frame">
@@ -239,14 +251,62 @@
   </div>
 </section>
 
+<section style="padding-top:0;">
+  <div class="section-head">
+    <h2 style="font-size:28px;">More gift than object</h2>
+    <p>Most people who buy this aren't decorating a table. They're telling someone "I remembered."</p>
+  </div>
+  <div class="features">
+    <div class="feature">
+      <h3>Housewarming</h3>
+      <p>A gift that says something about the home it's entering.</p>
+    </div>
+    <div class="feature">
+      <h3>For someone who misses Kolkata</h3>
+      <p>NRI Bengalis and anyone who's moved away from the city.</p>
+    </div>
+    <div class="feature">
+      <h3>Durga Puja & festive gifting</h3>
+      <p>A keepsake that doesn't fade after the season ends.</p>
+    </div>
+  </div>
+</section>
+
 <section class="story" id="story">
   <div class="wrap">
     <img src="images/tray-only.jpg" alt="Yellow Taxi wooden tray, close detail" style="border-radius:16px; box-shadow:0 30px 60px -24px rgba(0,0,0,.16);">
     <div>
-      <h2>Some cities you visit. Kolkata, you carry.</h2>
-      <p>The yellow Ambassador taxi has been Kolkata's fingerprint since the 1960s — still weaving through Maidan's trees, still the first thing you see stepping out of Howrah station.</p>
-      <p>This tray puts that image on your own table, wherever your table happens to be now.</p>
+      <h2>There are some things every Bengali remembers.</h2>
+      <p>The smell of rain on hot pavement. The sound of the dhaak in Puja week. And the yellow Ambassador taxi — Kolkata's fingerprint since the 1960s, still weaving through Maidan's trees, still the first thing you see stepping out of Howrah station.</p>
+      <p>We couldn't bottle the sound or the smell. So we put the sight of it on something you'll actually use — this tray, on your own table, wherever that table is now.</p>
     </div>
+  </div>
+</section>
+
+<section style="background:var(--bg-soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap" style="max-width:640px; text-align:center;">
+    <h2 style="font-size:24px; margin-bottom:16px;">Why we made this</h2>
+    <p style="color:var(--gray); font-size:16px;">
+      <!-- REPLACE with your real founder story — who you are, why this
+           specific product, what "Curating Memories" means to you.
+           A few honest sentences here will do more for trust than
+           anything else on this page. -->
+      A short, honest note from the founder goes here — who's behind The Traveller's Den, and why a yellow taxi tray specifically. Real names and a real photo build far more trust than polished copy ever can.
+    </p>
+  </div>
+</section>
+
+<section style="padding-top:56px; padding-bottom:56px;">
+  <div class="section-head" style="margin-bottom:36px;">
+    <h2 style="font-size:24px;">From people who've bought one</h2>
+    <p>
+      <!-- REPLACE this whole section once you have real reviews/photos.
+           Do not invent star ratings or customer counts — fabricated
+           numbers are both dishonest and a legal risk in ad platforms'
+           policies. Pull real reviews from WooCommerce/Google/Instagram
+           as they come in. -->
+      Real customer quotes and photos will go here as orders come in — nothing shown yet is invented.
+    </p>
   </div>
 </section>
 
@@ -256,7 +316,8 @@
     <div class="amount"><span id="price-main">₹1,350</span></div>
     <div id="price-regular" style="display:none; text-decoration:line-through; color:var(--gray-light); font-size:15px; margin-top:4px;"></div>
     <div class="desc">handmade wooden tray, 38.5 × 23.5cm</div>
-    <a href="https://thetravellersden.in/product/yellow-taxi-2/" class="btn-primary">Bring Kolkata Home</a>
+    <div style="font-size:13px; color:var(--gray-light); margin:-18px 0 22px;">Less than a dinner out for two — this one lasts years.</div>
+    <a href="https://thetravellersden.in/product/yellow-taxi-2/" class="btn-primary">Order Yours Today</a>
     <ul class="pricing-list">
       <li><b>✓</b> Solid wood, waterproof finish</li>
       <li><b>✓</b> 38.5 × 23.5cm, boxed at 40 × 25 × 4cm</li>
@@ -274,6 +335,18 @@
       <p>Solid wood with a waterproof, wipe-clean printed finish — built for daily use, not display only.</p>
     </details>
     <details class="faq-item">
+      <summary>Is the image printed or painted?</summary>
+      <p>Printed in fine detail directly onto the wood, then sealed — not a sticker or decal.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Is it heat and food safe?</summary>
+      <p>Yes — it's built to carry cups, plates, and snacks daily, not just sit on a shelf.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Will the print fade over time?</summary>
+      <p>The sealed finish is made to resist fading and water damage under normal daily use.</p>
+    </details>
+    <details class="faq-item">
       <summary>Is Cash on Delivery available?</summary>
       <p>Yes, alongside card and UPI at checkout.</p>
     </details>
@@ -281,12 +354,29 @@
       <summary>How long does shipping take?</summary>
       <p>2–4 business days within India, tracked once dispatched.</p>
     </details>
+    <details class="faq-item">
+      <summary>Do you offer gift wrapping?</summary>
+      <p>Reach out via WhatsApp or the contact page before ordering if you'd like it gift-wrapped — we can arrange it.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What if it arrives damaged?</summary>
+      <p>See our Refund and Returns Policy — reach out with photos and we'll sort out a replacement.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do you ship outside India?</summary>
+      <p>Check with us directly via the contact page for international shipping options and timelines.</p>
+    </details>
   </div>
 </section>
 
 <footer>
   The Traveller's Den · Kolkata · <a href="https://thetravellersden.in/product/yellow-taxi-2/" style="text-decoration:underline;">View on our store</a>
 </footer>
+
+<div class="sticky-bar">
+  <span class="amount-mini" id="price-sticky">₹1,350</span>
+  <a href="#buy" class="btn-primary">Order Now</a>
+</div>
 
 <script>
 /*
@@ -318,7 +408,7 @@
       const { price, regular_price, currency_minor_unit, currency_symbol } = product.prices;
       const current = formatMoney(price, currency_minor_unit, currency_symbol);
 
-      document.querySelectorAll('#price-nav, #price-hero, #price-main').forEach(el => {
+      document.querySelectorAll('#price-nav, #price-hero, #price-main, #price-sticky').forEach(el => {
         el.textContent = current;
       });
 
